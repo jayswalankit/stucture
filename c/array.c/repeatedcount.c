@@ -11,12 +11,12 @@ int main() {
     for(int i=0;i<n;i++){
         scanf("%d",&num[i]);
     }
-    int a;
-     for(int i=0;i<n;i++){
+    int i=0;
+     for(;i<n;i++){
          for(int j=i+1;j<n;j++){
              if(num[i]==num[j]){
                  count++;
-                 a=num[i];
+                 
                
              }
          }
@@ -29,7 +29,7 @@ int main() {
          }
      }
      if(repeat==1){
-         printf("%d=no\n",a);
+         printf("%d=no\n",num[i]);
      }
      else{
          printf("no\n");

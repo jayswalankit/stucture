@@ -1,29 +1,30 @@
 #include<stdio.h>
-int main() {
-    // Write C code here
+int main(){
     int n;
-    printf("enter your size");
+    printf("ente your size");
     scanf("%d",&n);
-    int arr[n],count=0;
-    printf("enter youur element 0and1\n");
-    for(int i=0;;i++){
-    scanf("%d",&i);
-    if(i==0||i==1){
-        arr[count]=i;
-        count++;
-        if(count==n){
-            break;
+    int arr[n];
+    printf("enter your elements");
+    for(int i=0;i<n;i++){
+        
+        scanf("%d",&arr[i]);
+    }
+    
+    for(int i=0;i<n;i++){
+       int  flag=0;
+    for(int j=0;j<n;j++){
+        if(arr[i]==arr[j]){
+          flag=1;
+          break;
+           
         }
     }
-    else{
-        printf("invalid\n");
+     if(flag==0){
+        printf("output");
+        printf("%d\n",arr[i]);
     }
     }
-    printf("output");
-    for(int i=0;i<n;i++){
-    printf("%d",arr[i]);
-
+   
+    
 
 }
-}
-
