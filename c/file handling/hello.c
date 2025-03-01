@@ -7,8 +7,7 @@ typedef struct student{
 } stu;
 stu s1[2];
 int main(){
-    FILE*file=fopen("update.txt","r");
-    FILE*file2=fopen("tem.txt","w");
+    FILE*file=fopen("2.txt","a");
     
     for(int i=0;i<2;i++){
         
@@ -20,17 +19,10 @@ int main(){
       scanf("%f",&s1[i].marks);
       getchar();
       
-      fprintf(file2,"%s %d %f",s1[i].name,s1[i].rollno,s1[i].marks);
+      fprintf(file,"%s %d %f",s1[i].name,s1[i].rollno,s1[i].marks);
     }
 fclose(file);
-fclose(file2);
-
-remove("update.txt");
-rename("tem.txt","update.txt");
-
-
-
-file=fopen("update.txt","r");
+file=fopen("2.txt","r");
 for(int i=0;i<2;i++){
 
     printf("%s %d %f\n",s1[i].name,s1[i].rollno,s1[i].marks);
